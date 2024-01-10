@@ -1,0 +1,1124 @@
+/* DESIGN INDEX */
+/* 1-design  navbar */
+/* 2-Design presentation */
+/* 3-Design  skills */
+/* 4-Projects */
+/* 5-Design section about */
+/* 6-Design  section about card*/
+/* 7-Design section services */
+/* 8- Footer Styles */
+/* 9- Desing carrusel  */
+/* 10- Preloader */
+
+
+
+
+/* 1-Diseños de navbar */
+/* import to font  */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+/* var of color  */
+:root {
+    --first-color: #707980;
+    --pirt-color: #283a47;
+}
+
+@media (min-width: 20px) and (max-width: 457px) {
+    .logo {
+        display: none;
+        width: 0px !important;
+        height: 0px !important;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+}
+
+.logo {
+    height: 100%;
+    text-shadow: 2px 2px 2px #888888;
+    /* Sombra con apariencia de plumas */
+}
+
+.logo img {
+    width: 2rem;
+    position: absolute;
+    top: 2px;
+    left: 9.2em;
+}
+
+li #language-switch {
+    display: flex;
+    max-height: 50px;
+    max-width: 50px;
+
+
+
+
+
+}
+
+.icono-translate {
+
+    height: 30px;
+}
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    min-width: 320px;
+    background-image: url("../img/buho\ presentacion.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav {
+    font-weight: bold;
+    background: #283a47;
+    height: 80px;
+    width: 100%;
+    z-index: 3;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    z-index: 3;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: #568ab3;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .logo img {
+        left: 8em;
+    }
+
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 917px) {
+    .checkbtn {
+        display: block;
+    }
+
+
+
+
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+section {
+
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+.fa-solid {
+    margin-right: 5px;
+}
+
+@media (max-width: 1070px) {
+    .icono-translate {
+        display: none;
+    }
+
+}
+
+
+
+
+
+/* Finish navbar */
+/* 2-Design presentation */
+.section-presentation {
+    font-family: 'Josefin Sans', sans-serif;
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px 2px #888888;
+    /* Sombra con apariencia de plumas */
+}
+
+.section-presentation h1 {
+    text-align: center;
+    width: 100%;
+    min-width: 320px;
+    max-width: 700px;
+    font-size: 3.5vw;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.section-presentation p {
+    color: #fff;
+    font-size: 2vw;
+    width: 100%;
+    min-width: none;
+    max-width: 900px;
+    text-align: center;
+}
+
+.section-presentation img {
+    width: 14vw;
+    border-radius: 50%;
+    border: 2px var(--pirt-color) solid;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* text responsive */
+@media (max-width: 800px) {
+    .section-presentation h1 {
+        font-size: 6vw;
+    }
+
+    .section-presentation p {
+        font-size: 3vw;
+    }
+
+    .section-presentation img {
+        width: 20vw;
+    }
+
+    .section-skills h1 {
+        font-size: 5vw !important;
+    }
+
+    .section-projects .card-medium h5 {
+        font-size: 6vw;
+    }
+
+    .section-projects .card-medium a {
+        font-size: 3.5vw;
+    }
+
+    .modal-content h2 {
+        font-size: 4vw;
+    }
+
+    .close {
+        left: 90vw !important;
+    }
+
+    .modal-content p {
+        font-size: 2.8vw !important;
+    }
+
+    .section-about h1 {
+        font-size: 7vw !important;
+    }
+
+    .section-about p {
+        font-size: 3.5vw !important;
+
+    }
+
+    .section-about-history p {
+        font-size: 3vw !important;
+
+    }
+
+    .section-about-history h1 {
+        font-size: 6.5vw !important;
+    }
+
+    .section-services-card h2 {
+        font-size: 5vw;
+        margin-bottom: 10px;
+    }
+
+}
+
+.section-presentation .svg .svg1 {
+
+
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+
+}
+
+
+
+
+/* finish presentation */
+
+
+/* Design  skills */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.section-skills {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section-skills h1 {
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    font-size: 3vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #888888;
+    /* Sombra con apariencia de plumas */
+    margin-bottom: 50px;
+
+}
+
+.section-skills img {
+    display: flex;
+    width: 100%;
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 15px;
+
+}
+
+.section-skills h5 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.section-skills .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 270px;
+    min-width: 270px;
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+    border: 2px var(--pirt-color) solid;
+    background-color: #e4ebf0;
+    border-radius: 10px;
+    box-shadow: 5px 6px 10px;
+    transform: translateY(20px);
+    /* Empieza un poco abajo */
+    animation: fadeInUp 0.5s ease forwards;
+    /* Animación */
+    animation-delay: 0.3s;
+    /* Retraso de la animación */
+}
+
+.section-skills .container-skills {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+    padding: 10px;
+    margin: auto 50px;
+    height: 100%;
+    margin-bottom: 50px;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(20px); /* Empieza un poco abajo */
+    animation: fadeInUp 0.5s ease forwards; /* Animación */
+    animation-delay: 0.3s; /* Retraso de la animación */
+}
+
+/* Definición de la animación */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Design Progress-bar */
+.progress-bar {
+    width: 80%;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.progress {
+    height: 20px;
+    background-color: #1c6d8d;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+
+}
+
+/* finish skills */
+
+/* 4- Projects */
+
+.card-medium {
+    border: var(--pirt-color) 3px solid;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.card-medium:hover{
+    transform: scale(1.05) translateY(-7px);
+}
+
+.card-medium h5 {
+    font-size: 2.80vw;
+    margin-top: 20px;
+}
+
+.card-medium a {
+    text-decoration: none;
+    color: var(--pirt-color);
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+}
+
+.section-projects{
+    height: 110%;
+    margin-bottom: 20px;
+}
+
+.section-projects .card-medium img {
+    width: 100%;
+    max-width: 100px;
+    margin-top: 30px;
+
+
+}
+
+.section-skills .section-projects .row {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+
+}
+
+/* Terminado Projects */
+
+/* Desings  pop-up */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    z-index: 99;
+
+}
+
+.modal-content .btn-ws {
+    background-color: #00bb2d;
+    width: 90%;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.modal-content .btn-tlg {
+    background-color: #0088cc;
+    width: 90%;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 100%;
+    max-height: 450px;
+    max-width: 400px;
+    /* Aplicar animación aquí */
+    animation-name: popupAnimation;
+    animation-duration: 1.5s;
+    border-radius: 30px;
+    border-color: rgb(5, 5, 5);
+
+}
+
+/* the button close */
+.close {
+    position: absolute;
+    left: 95vw;
+    top: 2vw;
+    right: 2;
+    color: #aaa;
+    float: right;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content form .name,
+.modal-content form .email,
+.modal-content form .message {
+
+
+    border: none;
+    font-size: 20px;
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    border-bottom: 2px solid;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.modal-content .btn-enviar {
+    color: #fff;
+    width: 90%;
+    text-transform: uppercase;
+    padding: 10px 29px;
+    font-size: 18px;
+    border-radius: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: var(--pirt-color);
+    border: none;
+
+}
+
+.modal-content .btn-enviar:hover {
+    cursor: pointer;
+}
+
+.modal-content button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*  Animation */
+@keyframes popupAnimation {
+    from {
+        top: -50px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.modal-content p i {
+    width: 30px;
+}
+
+.modal-content p {
+    font-size: 18px;
+
+}
+
+.modal-content {
+    min-width: 300px;
+}
+
+/* finish desings*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Diphylleia&display=swap');
+
+/* 5-Design section about */
+.section-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section-about h1 {
+    color: #ced1d3;
+    font-size: 5vw;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #0202027e;
+    /* Sombra con apariencia de plumas */
+}
+
+.section-about p {
+    color: #ced1d3 !important;
+    font-size: 2vw;
+    max-width: 70%;
+    text-align: center;
+
+    text-shadow: 2px 2px 2px #000000bd;
+    /* Sombra con apariencia de plumas */
+}
+
+.typewriter-text {
+
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .05em solid rgba(168, 168, 168, 0.089);
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+
+    margin: 20px;
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgba(0, 0, 0, 0.034);
+    }
+}
+
+
+.section-about-history {
+    background-color: #ced1d3;
+    width: 100%;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Diphylleia', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-about-history h1 {
+    text-align: center;
+    font-size: 5vw;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #4d4c4cbd;
+    /* Sombra con apariencia de plumas */
+    color: black;
+}
+
+.section-about-history p {
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 30px;
+    width: 70%;
+    text-shadow: 2px 2px 2px #4d4c4cbd;
+    /* Sombra con apariencia de plumas */
+}
+
+
+
+
+/* finish section about */
+
+/* 6-Design  section about card*/
+.section-about-other-skills {
+    background-color: #ffff;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.section-about-other-skills h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #4d4c4cbd;
+    /* Sombra con apariencia de plumas */
+
+}
+
+.section-about-other-skills .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+
+}
+
+.section-about-other-skills .row .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 300px;
+    min-width: 250px;
+    text-align: center;
+    box-shadow: 5px 6px 10px;
+    border-radius: 30px;
+    height: 300px;
+    max-height: 300px;
+    padding: 20px;
+    border: #535455 solid 2px;
+
+}
+
+.section-about-other-skills .row .card img {
+    width: 70px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.section-about-other-skills .row .card h2 {
+    margin-bottom: 10px;
+}
+
+
+
+/*Finish section about card*/
+
+/* 7-Design section services */
+
+.section-services-card {
+    background-color: #fff;
+    text-align: center;
+    height: 100%;
+
+}
+
+.section-services-card h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 11vw;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+}
+
+.section-services-card h2 {
+    font-size: 4vw;
+    margin-bottom: 30px;
+}
+
+.section-services-card .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.section-services-card img {
+
+    width: 100%;
+    max-width: 10vw;
+
+}
+
+.section-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.word {
+    color: #fff;
+
+    display: flex;
+    font-size: 10vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 4px 4px 4px #181717;
+    /* Sombra con apariencia de plumas */
+    z-index: -10;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: pop-in 0.5s forwards;
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.letter:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.letter:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.letter:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.letter:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.letter:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.letter:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.letter:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.letter:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.letter:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.letter:nth-child(10) {
+    animation-delay: 1s;
+}
+
+
+
+
+/* Finish section services  */
+
+
+
+
+/* 8- Footer Styles */
+.footer {
+    background-color: var(--pirt-color);
+    color: white;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container>div {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    color: #f8f8f8;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #aaa;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container>div {
+        margin-bottom: 20px;
+    }
+}
+
+.button-container {
+    text-align: center;
+}
+
+.animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(28, 105, 28);
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 30px;
+}
+
+.animated-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*Finish footer styles*/
+
+
+/* 9- Desing carrusel  */
+.carousel-container {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+.carousel {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 15s infinite linear;
+}
+
+.item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    font-size: 8vw;
+
+}
+
+.item:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+.item:nth-child(2) {
+    transform: rotateY(90deg) translateZ(300px);
+}
+
+.item:nth-child(3) {
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+.item:nth-child(4) {
+    transform: rotateY(270deg) translateZ(300px);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+/* Finish Desing carrusel  */
+
+/* 10- Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* Puedes cambiar el color de fondo si lo deseas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    /* Color del borde claro */
+    border-top: 5px solid var(--pirt-color);
+    /* Color del borde superior (el que gira) */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Finish Preloader */
+
