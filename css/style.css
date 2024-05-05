@@ -1477,3 +1477,8 @@ section {
 
 /* Finish Preloader */
 
+.container {
+    display: grid;   
+    grid-template-columns: repeat(3, 1fr); /* Crea tres columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
